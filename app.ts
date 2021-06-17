@@ -41,7 +41,6 @@ app.use('/static', express.static('public'));
 
 /* Configure routing. */
 app.get('/', index.getHomePage);
-//app.get('/parking', index.getParkingPage);
 app.use('/parking', parking as express.Router);
 
 /* Start both servers. */
