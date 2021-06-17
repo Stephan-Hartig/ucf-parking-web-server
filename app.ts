@@ -26,7 +26,8 @@ global.conn = mysql.createConnection({
 export let conn = global.conn;
 
 import index = require('./routes/index');
-const port = 3000;
+const parking: express.Router = require('./routes/parking');
+const port = 8080;
 const app = express();
 
 /* Configure middleware. */
@@ -40,13 +41,13 @@ app.use('/static', express.static('public'));
 
 /* Configure routing. */
 app.get('/', index.getHomePage);
-app.get('/parking', index.getParkingPage);
+app.use('/parking', parking as express.Router);
 
 /* Start both servers. */
 conn.connect((e) => {
    if (e) throw e;
    app.listen(port, () => {
-      console.log('Web server listening on port 3000.');
+      console.log(`Web server listening on port ${port}.`);
    });
 });
 

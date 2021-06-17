@@ -1,3 +1,23 @@
 <%- include('partials/header.ejs') %>
-
+<div class="d-flex justify-content-between align-items-center">
+   <div class="p-2"></div>
+   <div class="p-2">
+      <p>This web app shows the hourly parking availability by garage at UCF. This service is based on the data collected from <a href="https://secure.parking.ucf.edu/GarageCount/">UCF's Parking & Transportation Services website</a>.</p>
+      <p>
+         This service is still under construction. You'll notice missing data on certain days and hours, and that's from the backend crashing during these times. There are some features planned including:
+         <ul>
+            <li>Data extrapolation..
+               <ul>
+                  <li>..for missing data.</li>
+                  <li>..for future dates.</li>
+               </ul>
+            </li>
+            <li>Date picker.</li>
+            <li>Better mobile interface.</li>
+         </ul>
+      And maybe one day I will convert this into a dynamic/reactive application, and perhaps create a native interface for mobile.
+      </p>
+   </div>
+   <div class="p-2"></div>
+</div>
 <%- include('partials/footer.ejs') %>

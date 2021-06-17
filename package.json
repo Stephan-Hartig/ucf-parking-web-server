@@ -8,14 +8,18 @@
   },
   "author": "Stephan Hartig",
   "license": "MIT",
+  "@comment dependencies": {
+    "ucf-database": "file:/usr/local/lib/node_modules/ucf-database/ucf-database-1.0.0.tgz"
+  },
   "dependencies": {
     "chartjs": "^0.3.24",
     "cors": "^2.8.5",
+    "dayjs": "^1.10.4",
     "dotenv": "^9.0.2",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mysql": "^2.18.1",
-    "database-access": "file:/usr/local/lib/node_modules/database-access/database-access-1.0.0.tgz"
+    "ucf-database": "file:/usr/local/lib/node_modules/ucf-database/ucf-database-1.0.1.tgz"
   },
   "devDependencies": {
     "@types/cors": "^2.8.10",

@@ -1,0 +1,26 @@
+<canvas id="parking-graph" width="400" height="400"></canvas>
+<script src="/static/chart.min.js"></script>
+<script>
+(function() {
+   let canvas = document.querySelector('#parking-graph');
+   if (window.innerWidth < 600) {
+      //canvas.style.width = '50vw';
+      //canvas.style.height = '50vw';
+      canvas.width = 200;
+   }
+   //else {
+   //   canvas.width = 400;
+   //}
+   //window.addEventListener('resize', function(event) {
+   //   if (window.innerWidth < 600) {
+   //      canvas.width = 200;
+   //   }
+   //}, true);
+   let ctx = canvas.getContext('2d');
+   let garageChart = new Chart(ctx, {
+      type: 'line',
+      data: <%- JSON.stringify(chartData) %>,
+      options: <%- JSON.stringify(chartOptions) %>
+   });
+})();
+</script>
