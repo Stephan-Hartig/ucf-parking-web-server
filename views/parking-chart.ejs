@@ -1,0 +1,12 @@
+<%- include('partials/header.ejs') %>
+<div class="d-flex justify-content-between align-items-center">
+   <div class="p-2" id="right-link"><a href="<%= linkLeft; %>">Previous day</a></div>
+   <div class="p-2">
+      <!--<div class="chart-container" style="width:90vw; height:90vw">-->
+         <%- include('./chart.ejs') %>
+      <!--</div>-->
+      <p class="text-center">Viewing data for <%= dateFancy; %>.</p>
+   </div>
+   <div class="p-2" id="right-link"><a href="<%= linkRight; %>">Next day</a></div>
+</div>
+<%- include('partials/footer.ejs') %>
